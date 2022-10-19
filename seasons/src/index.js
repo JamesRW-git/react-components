@@ -4,10 +4,11 @@ import ReactDOM from 'react-dom';
 class App extends React.Component {
     //Not required for a React component
     constructor(props) {
+
         super(props);
 
         //this is the only time we do direct assignment to this.state using '='
-        this.state = {lat: null};
+        this.state = {lat: null, lon: null};
 
         window.navigator.geolocation.getCurrentPosition(
             (position) => {
